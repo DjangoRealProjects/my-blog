@@ -1,0 +1,150 @@
+{% comment %} {% comment %} <!DOCTYPE html>
+<html>
+    <head>
+        <title>Ola's blog</title>
+    </head>
+    <body>
+        <p>Hi there!</p>
+        <p>It works!</p>
+    </body>
+</html> {% endcomment %}
+
+
+###############################
+{% comment %} <!DOCTYPE html>
+<html>
+    <head>
+        <title>DevOps Engineer blog</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">DevOps Engineer blog</a></h1>
+        </header>
+
+        <article>
+            <time>published: 12.17.2025, 20:52</time>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </article>
+
+        <article>
+            <time>published: 12.17.2025, 20:52</time>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </article>
+    </body>
+</html> {% endcomment %}
+
+###################################
+{% comment %} <!DOCTYPE html>
+<html>
+    <head>
+        <title>DevOps Engineer blog</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">DevOps Engineer blog</a></h1>
+        </header>
+
+        {{ posts }}
+            <time>published: 12.17.2025, 20:52</time>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </article>
+
+        {{ posts }}
+            <time>published: 12.17.2025, 20:52</time>
+            <h2><a href="">My second post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </article>
+    </body>
+</html> {% endcomment %}
+
+###################################################################################
+###################################
+{% comment %} <!DOCTYPE html>
+<html>
+    <head>
+        <title>DevOps Engineer blog</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">DevOps Engineer blog</a></h1>
+        </header>
+
+        {{ posts }}
+            <time>published: 12.20.2025, 03:12</time>
+            <h2><a href="">My first post</a></h2>
+            <p>Ankit has great presentation skills and knows the best way to share his knowledge. He starts small, emphasizing the need to first master the basics in a way no one has ever taught me before. He then gradually indoctrinates one with the idea of applying the same logic from basic Python concepts to more complex ones. This approach makes understanding both the concepts and how the interpreter works incredibly clear and intuitive.</p>
+        </article>
+
+        {{ posts }}
+            <time>published: 12.20.2025, 03:12</time>
+            <h2><a href="">My second post</a></h2>
+            <p>I like the fact that the class is quite engaging. It is not pedagogic — there is real two-way communication. There is no fluff; his explanations are straight to the point, very clear and concise. He uses the right words, tone, and analogies to pass the message. The class is deeply conceptual and very hands-on. Ankit remains the best Python teacher I have encountered so far.</p>
+        </article>
+    </body>
+</html> {% endcomment %}
+
+{% comment %} ###################################################################################
+<header>
+    <h1><a href="/">DevOps Engineer blog</a></h1>
+</header>
+
+{% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+{% endfor %} {% endcomment %}
+
+###############################################################################################################
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DevOps Engineer blog</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">DevOps Engineer blog</a></h1>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext">
+
+        </header>
+
+        {% for post in posts %}
+            <article>
+                <time>published: {{ post.published_date }}</time>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
+    </body>
+</html> {% endcomment %}
+
+{% comment %} ################################ CSS ################################################
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> {% endcomment %} {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

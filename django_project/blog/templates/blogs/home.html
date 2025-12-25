@@ -1,0 +1,52 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+
+
+{% comment %} {% extends "blog/base.html" %}
+{% block title %}Home{% endblock %}  # remove this and put this inside the base template
+
+{% block content %}
+  <h1>Blog Posts</h1>
+  {% for post in posts %}
+    <article>
+      <h2>{{ post.title }}</h2>
+      <p>By {{ post.author }} on {{ post.date_posted }}</p>
+      <p>{{ post.content }}</p>
+    </article>
+  {% endfor %}
+{% endblock %} {% endcomment %}
+
+
+
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    {% if title %}   # remove this and put this inside the base template
+        <title>Django Blog - {{title}}</title>
+    {% else %%}
+        <title>Django Blog </title>
+    {% endif %}
+</head>
+<body>
+    {% for post in posts %}
+        <p>{{ post.title }}</p>
+        <p>{{ post.author }} on {{post.date_posted}}</p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+</body>
+</html> {% endcomment %}
+{% comment %} Remove everything above and leave out only for Loop line 11-15 {% endcomment %}
+
